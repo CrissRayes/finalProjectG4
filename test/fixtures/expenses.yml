@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  supplier: MyString
+  month: MyString
+  year: MyString
+  document_type: MyString
+  document_date: 2022-06-09
+  category: MyString
+  amount: 1
+  description: MyText
+  payment_method: MyString
+  payment_number: MyString
+
+two:
+  supplier: MyString
+  month: MyString
+  year: MyString
+  document_type: MyString
+  document_date: 2022-06-09
+  category: MyString
+  amount: 1
+  description: MyText
+  payment_method: MyString
+  payment_number: MyString
