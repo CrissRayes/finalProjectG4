@@ -4,7 +4,7 @@ class ExpensesController < ApplicationController
   # GET /expenses or /expenses.json
   def index
     @q = Expense.ransack(params[:q])
-    @expenses = @q.result(distinct: true)
+    @expenses = @q.result(distinct: true).page(params[:page])
     #@expenses = Expense.all
   end
 
