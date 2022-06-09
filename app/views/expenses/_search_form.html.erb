@@ -1,5 +1,5 @@
 <%= search_form_for @q do |f| %>
-  <%= f.select :year_cont, ["2020", "2021", "2022", "2023", "2024", "2025"] %>
+  <%= f.select :year_cont, ["2022", "2023", "2024", "2025"] %>
   <%= f.select :month_cont, ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"] %>
   <%= f.search_field :description_cont, placeholder: "descripción" %>
   <%= f.submit "Buscar" %>
