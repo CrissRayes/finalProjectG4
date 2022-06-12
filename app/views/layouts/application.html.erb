@@ -17,7 +17,9 @@
       <p class="alert"><%= alert %></p>
 
       <% if user_signed_in? %>
-        <%= link_to 'Egresos', expenses_path %>
+       <p>Hola! <%= current_user.name %></p>
+       <%= link_to 'Inicio', root_path %> | 
+        <%= link_to 'Egresos', expenses_path %> | 
         <%= link_to 'Cerrar Sesión', destroy_user_session_path, data: { "turbo-method": :delete } %>
       <% end %>
 
