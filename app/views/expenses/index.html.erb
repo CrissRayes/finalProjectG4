@@ -2,8 +2,12 @@
 
 <h1>Egresos</h1>
 <%= render "search_form" %>
-<%= link_to "Egresos", expenses_path %> | 
+<%= link_to "Egresos", expenses_path %>
+
+<% if can? :create, new_expense_path %> | 
 <%= link_to "Nuevo Egreso", new_expense_path %>
+<% end %>
+
 <%= paginate @expenses %>
 <div id="expenses">
   <table class="table table-striped">
