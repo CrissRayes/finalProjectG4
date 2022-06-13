@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root "home#index"
+  resources :units
   devise_for :users
+  root "home#index"
   resources :expenses
 end

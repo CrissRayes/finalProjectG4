@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_12_143518) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_12_223916) do
+  create_table "buildings", force: :cascade do |t|
+    t.string "rut"
+    t.string "name"
+    t.string "address"
+    t.string "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "buildings_expenses", id: false, force: :cascade do |t|
+    t.integer "building_id", null: false
+    t.integer "expense_id", null: false
+    t.index ["building_id", "expense_id"], name: "index_buildings_expenses_on_building_id_and_expense_id"
+    t.index ["expense_id", "building_id"], name: "index_buildings_expenses_on_expense_id_and_building_id"
+  end
+
   create_table "expenses", force: :cascade do |t|
     t.string "supplier"
     t.string "month"
@@ -22,6 +38,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_12_143518) do
     t.text "description"
     t.string "payment_method"
     t.string "payment_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "units", force: :cascade do |t|
+    t.string "name"
+    t.integer "unit_type"
+    t.decimal "alicuota"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
