@@ -35,7 +35,7 @@
         <td><%= expense.supplier %></td>
         <td><%= expense.document_type %></td>
         <td><%= expense.document_date %></td>
-        <td><%= expense.amount %></td>
+        <td><%= number_to_currency(expense.amount) %></td>
         <td><%= expense.description %></td>
         <td><%= expense.payment_method %></td>
         <td><%= expense.payment_number %></td>

@@ -11,6 +11,7 @@ gem 'ransack'
 gem 'kaminari'
 gem 'devise'
 gem 'cancancan'
+gem 'i18n'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
