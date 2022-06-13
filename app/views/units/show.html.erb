@@ -3,13 +3,13 @@
 <%= render @unit %>
 
 <div>
-  <%= link_to "Back to units", units_path %>
+  <%= link_to "Unidades", units_path %> | 
   <% if can? :update, @unit %>
-    <%= link_to "Edit this unit", edit_unit_path(@unit) %> |
+    <%= link_to "Editar", edit_unit_path(@unit) %> |
   <% end %>
 
   <% if can? :destroy, @unit %>
-    <%= button_to "Destroy this unit", @unit, method: :delete %>
+    <%= button_to "Eliminar", @unit, method: :delete %>
   <% end %>
 
 </div>
