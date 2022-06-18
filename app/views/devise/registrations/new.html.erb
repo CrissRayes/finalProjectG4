@@ -26,10 +26,12 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <% if can? :manage, User %>
   <div class="field mt-3">
     <%= f.label :admin, "Tipo de Usuario" %><br />
     <%= f.select :admin, [["Usuario", false], ["Administrador", true]],  select: false %>
   </div>
+<% end %>
 
   <div class="actions mt-3">
     <%= f.submit "Crear cuenta" %>
